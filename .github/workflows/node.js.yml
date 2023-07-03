@@ -34,4 +34,6 @@ jobs:
     runs-on: ubuntu-latest
     needs: build
     steps:
-    - run: echo ${{ secrets.MY_SECRET }}
+    - run: echo "$MY_SECRET"
+      env:
+        MY_SCRET: ${{ secrets.MY_SECRET }}
